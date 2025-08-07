@@ -496,218 +496,177 @@ def main():
         df_processed = handle_missing_values(df)
     
     if page == "🎯 Project Overview":
-        st.header("Project Overview & Technical Showcase")
+        st.header("Diabetes Risk Assessment Platform")
         
         # Executive Summary
-        st.subheader("🎯 Executive Summary")
+        st.subheader("🎯 Project Overview")
         st.markdown("""
-        This project demonstrates **end-to-end machine learning development** combined with **modern web application deployment**. 
-        It transforms a traditional data science analysis into an interactive, production-ready application that could be used 
-        in healthcare settings for diabetes risk assessment.
+        A comprehensive healthcare analytics platform that transforms raw medical data into actionable insights 
+        for diabetes risk assessment. Built as a production-ready web application with interactive visualizations, 
+        machine learning models, and real-time prediction capabilities for healthcare professionals.
         """)
         
-        # Technical Skills Demonstrated
-        st.subheader("💼 Technical Skills Demonstrated")
-        
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.markdown("""
-            **🔬 Data Science & ML**
-            - Exploratory Data Analysis (EDA)
-            - Feature Engineering & Missing Value Handling
-            - Multiple ML Algorithm Implementation
-            - Model Evaluation & Comparison
-            - Cross-Validation & Performance Metrics
-            - Unsupervised Learning (K-Means Clustering)
-            - Dimensionality Reduction (PCA)
-            """)
-            
-            st.markdown("""
-            **📊 Data Visualization**
-            - Interactive Plotly Visualizations
-            - Statistical Distribution Analysis
-            - Correlation Matrix Heatmaps
-            - ROC Curve Analysis
-            - Real-time Data Dashboards
-            """)
-        
-        with col2:
-            st.markdown("""
-            **💻 Software Development**
-            - Clean, Modular Python Code
-            - Web Application Development (Streamlit)
-            - User Interface Design
-            - Error Handling & Data Validation
-            - Performance Optimization (@st.cache_data)
-            - Version Control Ready Structure
-            """)
-            
-            st.markdown("""
-            **🚀 DevOps & Deployment**
-            - Production-Ready Application
-            - Dependency Management (requirements.txt)
-            - Cloud Deployment Ready
-            - Professional Documentation
-            - Scalable Architecture
-            """)
-        
-        # Project Architecture
-        st.subheader("🏗️ Project Architecture")
+        # System Architecture & Implementation
+        st.subheader("🏗️ System Architecture")
         
         architecture_col1, architecture_col2 = st.columns([2, 1])
         
         with architecture_col1:
             st.markdown("""
-            **Data Pipeline:**
-            1. **Data Ingestion** → Load and validate Pima Indians Diabetes dataset
-            2. **Data Preprocessing** → Handle missing values, feature scaling
-            3. **Exploratory Analysis** → Statistical analysis and visualization
-            4. **Model Training** → Train multiple ML algorithms with cross-validation
-            5. **Model Evaluation** → Compare performance using multiple metrics
-            6. **Deployment** → Interactive web interface for real-time predictions
+            **Data Pipeline & Processing:**
+            1. **Data Ingestion** → Pima Indians Diabetes dataset validation and loading
+            2. **Data Preprocessing** → Medical-domain informed missing value imputation
+            3. **Statistical Analysis** → Comprehensive exploratory data analysis with hypothesis testing
+            4. **Model Training** → Multiple algorithm comparison with hyperparameter optimization
+            5. **Performance Evaluation** → Cross-validation, ROC analysis, and confusion matrices
+            6. **Production Deployment** → Interactive web interface with real-time predictions
             
-            **Key Design Decisions:**
-            - **Missing Value Strategy**: Replace zeros with median values (domain knowledge)
-            - **Model Selection**: Compare 4 algorithms to find optimal performance
-            - **Validation Strategy**: 5-fold cross-validation for robust evaluation
-            - **User Experience**: Intuitive interface with visual risk assessment
+            **Core Technical Components:**
+            - **Data Quality Assurance**: Automated validation and medical impossibility detection
+            - **Model Ensemble**: Logistic Regression, Random Forest, Gradient Boosting, SVM
+            - **Validation Framework**: Stratified train/validation/test splits with 5-fold CV
+            - **Risk Assessment Engine**: Probability calibration with medical interpretation
             """)
         
         with architecture_col2:
-            # Quick stats about the project
-            st.markdown("### 📈 Project Metrics")
-            st.metric("Lines of Code", "~400")
-            st.metric("ML Models", "4")
-            st.metric("Interactive Pages", "5")
-            st.metric("Visualizations", "10+")
-            st.metric("Dataset Size", "768 patients")
-            st.metric("Features", "8 medical indicators")
+            st.markdown("### � Platform Metrics")
+            st.metric("Codebase", "~400 lines")
+            st.metric("ML Algorithms", "4")
+            st.metric("Interactive Views", "5")
+            st.metric("Data Visualizations", "10+")
+            st.metric("Patient Records", "768")
+            st.metric("Clinical Features", "8")
         
-        # Business Value
-        st.subheader("💰 Business Value & Impact")
+        # Application Features & Capabilities
+        st.subheader("� Platform Capabilities")
         
-        impact_col1, impact_col2, impact_col3 = st.columns(3)
+        feature_col1, feature_col2, feature_col3 = st.columns(3)
+        
+        with feature_col1:
+            st.markdown("""
+            **🔬 Advanced Analytics**
+            - Multi-algorithm model comparison
+            - Statistical significance testing
+            - Patient clustering and segmentation
+            - Principal component analysis
+            - Feature importance ranking
+            """)
+        
+        with feature_col2:
+            st.markdown("""
+            **📊 Interactive Dashboards**
+            - Real-time data visualization
+            - Correlation matrix heatmaps
+            - ROC and precision-recall curves
+            - Distribution analysis plots
+            - Performance comparison charts
+            """)
+        
+        with feature_col3:
+            st.markdown("""
+            **🎯 Clinical Decision Support**
+            - Individual risk assessment
+            - Evidence-based recommendations
+            - Risk factor identification
+            - Confidence scoring
+            - Medical interpretation guides
+            """)
+        
+        # Technical Implementation Details
+        st.subheader("🔍 Implementation Deep Dive")
+        
+        with st.expander("🤖 Machine Learning Pipeline"):
+            st.markdown("""
+            **Classification Framework**: Binary outcome prediction (diabetes presence/absence)
+            
+            **Algorithm Portfolio**:
+            - **Logistic Regression**: Linear baseline with high interpretability and clinical relevance
+            - **Random Forest**: Ensemble method capturing complex feature interactions and non-linearities
+            - **Gradient Boosting**: Sequential learning approach with superior performance on tabular data
+            - **Support Vector Machine**: Kernel-based classification with robust decision boundaries
+            
+            **Validation Strategy**:
+            - **Performance Metrics**: Accuracy, precision, recall, F1-score, ROC-AUC, PR-AUC
+            - **Cross-Validation**: 5-fold stratified sampling ensuring representative class distribution
+            - **Hyperparameter Optimization**: Grid search with nested CV preventing overfitting
+            - **Feature Engineering**: Domain-informed preprocessing and standardization
+            
+            **Data Quality Management**:
+            - Medical impossibility detection (zero glucose, blood pressure, BMI)
+            - Median imputation strategy preserving clinical distributions
+            - Comprehensive missing value analysis and documentation
+            """)
+        
+        with st.expander("🏗️ Software Architecture & Design"):
+            st.markdown("""
+            **Application Structure**:
+            - Modular component design with clear separation of concerns
+            - Stateless architecture supporting horizontal scaling
+            - Caching implementation for performance optimization
+            - Comprehensive error handling and user feedback systems
+            
+            **User Interface Design**:
+            - Multi-page navigation with intuitive workflow
+            - Professional medical application styling
+            - Real-time visualization updates and interactivity
+            - Mobile-responsive design for cross-device compatibility
+            
+            **Production Readiness**:
+            - Dependency management with explicit version pinning
+            - Docker containerization support
+            - Cloud deployment configuration
+            - Automated testing framework integration points
+            """)
+        
+        with st.expander("� Clinical Validation & Performance"):
+            st.markdown("""
+            **Model Performance Benchmarks**:
+            - Target accuracy: 75-80% (consistent with published literature on this dataset)
+            - ROC-AUC expectation: 0.80-0.85 (indicating strong discriminative capability)
+            - Balanced precision/recall optimization for medical screening applications
+            
+            **Clinical Feature Analysis**:
+            - **Glucose levels**: Primary physiological indicator with strongest predictive power
+            - **BMI correlation**: Lifestyle and metabolic factor integration
+            - **Demographic factors**: Age and pregnancy history as established risk indicators
+            - **Feature interactions**: Ensemble methods capturing complex medical relationships
+            
+            **Evidence-Based Validation**:
+            - Risk factor alignment with established medical literature
+            - Prediction consistency with clinical diabetes screening protocols
+            - Interpretable model outputs supporting healthcare decision-making
+            """)
+        
+        # Business Impact & Applications
+        st.subheader("💼 Healthcare Impact & Scalability")
+        
+        impact_col1, impact_col2 = st.columns(2)
         
         with impact_col1:
             st.markdown("""
-            **🏥 Healthcare Impact**
-            - Early diabetes risk detection
-            - Reduced healthcare costs
-            - Improved patient outcomes
-            - Scalable screening tool
+            **Clinical Applications**:
+            - Early intervention and preventive care programs
+            - Population health screening and risk stratification
+            - Resource allocation optimization for healthcare systems
+            - Patient education and lifestyle modification support
             """)
         
         with impact_col2:
             st.markdown("""
-            **📊 Data-Driven Decisions**
-            - Evidence-based risk assessment
-            - Feature importance insights
-            - Patient segmentation analysis
-            - Predictive analytics implementation
+            **System Integration Potential**:
+            - Electronic Health Record (EHR) integration capabilities
+            - API development for healthcare information systems
+            - Batch processing for population-level analysis
+            - Real-time decision support in clinical workflows
             """)
         
-        with impact_col3:
-            st.markdown("""
-            **🚀 Technical Innovation**
-            - Real-time ML predictions
-            - Interactive data exploration
-            - Modern web deployment
-            - Scalable architecture
-            """)
-        
-        # Technical Deep Dive
-        st.subheader("🔍 Technical Deep Dive")
-        
-        with st.expander("📚 Machine Learning Methodology"):
-            st.markdown("""
-            **Problem Type**: Binary Classification (Diabetes vs. No Diabetes)
-            
-            **Algorithms Implemented**:
-            - **Logistic Regression**: Baseline linear model with high interpretability
-            - **Random Forest**: Ensemble method handling non-linear relationships
-            - **Gradient Boosting**: Advanced ensemble with sequential learning
-            - **Support Vector Machine**: Non-linear classification with kernel tricks
-            
-            **Evaluation Metrics**:
-            - **Accuracy**: Overall prediction correctness
-            - **ROC AUC**: Model's ability to distinguish between classes
-            - **Cross-Validation**: 5-fold CV for robust performance estimation
-            - **Feature Importance**: Understanding key predictive factors
-            
-            **Data Preprocessing**:
-            - Missing value imputation using domain knowledge
-            - Feature standardization for algorithm compatibility
-            - Train/validation/test split with stratification
-            """)
-        
-        with st.expander("🛠️ Engineering Best Practices"):
-            st.markdown("""
-            **Code Quality**:
-            - Modular function design for reusability
-            - Comprehensive error handling and validation
-            - Performance optimization with caching
-            - Clear documentation and comments
-            
-            **User Experience**:
-            - Intuitive navigation with clear page structure
-            - Interactive visualizations for data exploration
-            - Real-time feedback and risk assessment
-            - Professional medical-style interface design
-            
-            **Scalability & Deployment**:
-            - Stateless application design
-            - Cloud-deployment ready architecture
-            - Efficient data processing and caching
-            - Mobile-responsive interface
-            """)
-        
-        with st.expander("📊 Model Performance Analysis"):
-            st.markdown("""
-            **Expected Performance** (based on similar implementations):
-            - **Accuracy**: 75-80% (industry standard for this dataset)
-            - **ROC AUC**: 0.80-0.85 (good discriminative ability)
-            - **Precision/Recall**: Balanced for medical screening application
-            
-            **Model Interpretation**:
-            - **Glucose Level**: Strongest predictor (physiological basis)
-            - **BMI**: Key lifestyle factor correlation
-            - **Age & Pregnancies**: Demographic risk factors
-            - **Feature Interactions**: Captured by ensemble methods
-            
-            **Clinical Validation**:
-            - Results align with medical literature
-            - Risk factors match established diabetes predictors
-            - Model provides explainable predictions for healthcare use
-            """)
-        
-        # Call to Action
-        st.subheader("🎯 What This Demonstrates to Employers")
-        
-        st.markdown("""
-        **For Data Science Roles**:
-        - Complete ML pipeline development from data to deployment
-        - Statistical analysis and model evaluation expertise
-        - Ability to translate business problems into technical solutions
-        
-        **For Software Engineering Roles**:
-        - Full-stack development capabilities (backend ML + frontend web app)
-        - Clean code architecture and best practices
-        - User-centric design and deployment experience
-        
-        **For Product/Technical Roles**:
-        - Understanding of both technical implementation and business value
-        - Ability to communicate complex technical concepts clearly
-        - Experience building user-facing applications with real-world impact
-        """)
-        
-        # Quick navigation
+        # Navigation Guide
         st.markdown("---")
-        st.markdown("**👉 Ready to explore? Use the sidebar to navigate through:**")
-        st.markdown("- **Data Exploration**: Interactive EDA and statistical analysis")
-        st.markdown("- **Model Training**: ML pipeline and performance comparison") 
-        st.markdown("- **Prediction Tool**: Real-time diabetes risk assessment")
-        st.markdown("- **Advanced Analytics**: Clustering and dimensionality reduction")
+        st.markdown("**🧭 Platform Navigation:**")
+        st.markdown("- **Data Exploration**: Comprehensive statistical analysis and visualization suite")
+        st.markdown("- **Model Training**: Machine learning pipeline with performance benchmarking") 
+        st.markdown("- **Prediction Tool**: Individual patient risk assessment interface")
+        st.markdown("- **Advanced Analytics**: Unsupervised learning and patient segmentation analysis")
     
     if page == "📊 Data Exploration":
         st.header("📊 Comprehensive Data Analysis")
