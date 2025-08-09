@@ -529,7 +529,7 @@ def main():
             """)
         
         with architecture_col2:
-            st.markdown("### � Platform Metrics")
+            st.markdown("### 🔧 Platform Metrics")
             st.metric("Codebase", "~400 lines")
             st.metric("ML Algorithms", "4")
             st.metric("Interactive Views", "5")
@@ -538,7 +538,7 @@ def main():
             st.metric("Clinical Features", "8")
         
         # Application Features & Capabilities
-        st.subheader("� Platform Capabilities")
+        st.subheader("📈 Platform Capabilities")
         
         feature_col1, feature_col2, feature_col3 = st.columns(3)
         
