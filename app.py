@@ -618,7 +618,7 @@ def main():
             - Automated testing framework integration points
             """)
         
-        with st.expander("� Clinical Validation & Performance"):
+        with st.expander("✅ Clinical Validation & Performance"):
             st.markdown("""
             **Model Performance Benchmarks**:
             - Target accuracy: 75-80% (consistent with published literature on this dataset)
